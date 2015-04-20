@@ -14,7 +14,7 @@ import ca.odell.glazedlists.listfield.ListDataListener;
  */
 public class GlazedRecyclerAdapter<T> extends RecyclerView.Adapter<GlazedRecyclerAdapter.ViewHolder> {
 
-    private AndroidEventListModel listModel;
+    private AndroidBoundListModel listModel;
     private final TypeInfo[] typeInfo;
     private final UpdateHandler updateHandler;
 
@@ -27,8 +27,8 @@ public class GlazedRecyclerAdapter<T> extends RecyclerView.Adapter<GlazedRecycle
         this.typeInfo = typeInfo;
     }
 
-    private AndroidEventListModel initListModel(
-            AndroidEventListModel listModel, ListDataListener updateHandler) {
+    private AndroidBoundListModel initListModel(
+            AndroidBoundListModel listModel, ListDataListener updateHandler) {
         listModel.addListDataListener(updateHandler);
         return listModel;
     }
